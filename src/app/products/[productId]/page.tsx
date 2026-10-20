@@ -1,3 +1,11 @@
+export async function generateMetadata({ params }){
+ const { productId } = await params;
+ return {
+    title : `Product ${productId} | My store`,
+    description : `View details about the product ${productId}`
+ }
+}
+
 export default async function PrdouctDetails({
     params,
 }: {
